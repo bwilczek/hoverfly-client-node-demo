@@ -1,0 +1,19 @@
+{
+  "name": "github-stars-checker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npx tsx src/index.ts"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "https-proxy-agent": "^7.0.6",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

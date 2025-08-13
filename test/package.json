@@ -1,0 +1,14 @@
+{
+  "name": "github-stars-checker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "npx tsx test.ts"
+  },
+  "devDependencies": {
+    "@bwilczek/hoverfly-client": "^0.0.7",
+    "@types/node": "^20.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

@@ -27,9 +27,9 @@ get "/" do
     <html>
       <head><title>GitHub Stars Checker</title></head>
       <body>
-        <h1>#{REPO}</h1>
+        <h1>💎 #{REPO}</h1>
         <p>⭐ Stars: #{stars}</p>
-        <p>#{message}</p>
+        <p id="message">#{message}</p>
       </body>
     </html>
   HTML

@@ -1,0 +1,38 @@
+services:
+  node-app:
+    build: ./app-node
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app-node:/app
+    environment:
+      http_proxy: http://hoverfly:8500
+      https_proxy: http://hoverfly:8500
+      no_proxy: registry.npmjs.org
+
+  ruby-app:
+    build: ./app-ruby
+    ports:
+      - "4567:4567"
+    volumes:
+      - ./app-ruby:/app
+    command: ruby app.rb -o 0.0.0.0 -p 4567
+    environment:
+      http_proxy: http://hoverfly:8500
+      https_proxy: http://hoverfly:8500
+
+  curl-app:
+    image: curlimages/curl:latest
+    entrypoint: [ "tail", "-f", "/dev/null" ]
+    environment:
+      http_proxy: http://hoverfly:8500
+      https_proxy: http://hoverfly:8500
+      CURL_CA_BUNDLE: /hoverfly.crt
+    volumes:
+      - ./hoverfly.crt:/hoverfly.crt
+
+  hoverfly:
+    image: spectolabs/hoverfly:latest
+    ports:
+      - "8500:8500"
+      - "8888:8888"

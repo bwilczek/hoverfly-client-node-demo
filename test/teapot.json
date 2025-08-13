@@ -1,0 +1,84 @@
+{
+    "data": {
+        "pairs": [
+            {
+                "request": {
+                    "path": [
+                        {
+                            "matcher": "exact",
+                            "value": "/status/418"
+                        }
+                    ],
+                    "method": [
+                        {
+                            "matcher": "exact",
+                            "value": "GET"
+                        }
+                    ],
+                    "destination": [
+                        {
+                            "matcher": "exact",
+                            "value": "httpbingo.org"
+                        }
+                    ],
+                    "scheme": [
+                        {
+                            "matcher": "exact",
+                            "value": "https"
+                        }
+                    ],
+                    "body": [
+                        {
+                            "matcher": "exact",
+                            "value": ""
+                        }
+                    ]
+                },
+                "response": {
+                    "status": 418,
+                    "body": "I used to be a teapot!",
+                    "encodedBody": false,
+                    "headers": {
+                        "Access-Control-Allow-Credentials": [
+                            "true"
+                        ],
+                        "Access-Control-Allow-Origin": [
+                            "*"
+                        ],
+                        "Content-Type": [
+                            "text/plain; charset=utf-8"
+                        ],
+                        "Date": [
+                            "Wed, 13 Aug 2025 19:02:12 GMT"
+                        ],
+                        "Fly-Request-Id": [
+                            "01K2JCZDCKS35AH06S1MRQZ7NQ-fra"
+                        ],
+                        "Hoverfly": [
+                            "Was-Here"
+                        ],
+                        "Server": [
+                            "Fly/b2eb1af1a (2025-08-13)"
+                        ],
+                        "Via": [
+                            "1.1 fly.io, 1.1 fly.io"
+                        ],
+                        "X-More-Info": [
+                            "http://tools.ietf.org/html/rfc2324"
+                        ]
+                    },
+                    "templated": false
+                }
+            }
+        ],
+        "globalActions": {
+            "delays": [],
+            "delaysLogNormal": []
+        }
+    },
+    "meta": {
+        "schemaVersion": "v5.3",
+        "hoverflyVersion": "v1.11.3",
+        "timeExported": "2025-08-13T19:02:18Z"
+    }
+}
